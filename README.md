@@ -116,7 +116,7 @@ The third most important feature is if the customer has an international plan.
 About 32% of churners have an international plan, compared to about 7% of non-churners. Further investigation should be done to determine if international plans are meetings customers needs.
 
 #### Conclusion:
-
+While region did not appear to have much influence on customer churn, several other factors did. The telecom company should conduct further research to ensure their heavy daytime minute user, international plan users, and customers who call customer service are satisfied with their service.
 
 ### Deployment
 For More Information, please review my full analysis in Jupyter Notebook or my presentation.
