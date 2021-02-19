@@ -90,6 +90,7 @@ I stayed with the boosted model to determine feature importance, and used SHAP (
 ##### Recommendation 1:
 Looking at the first feature from the importance graph, I used a boxplot to compare the total day minutes of customers who stayed and those who churned.
 ![pic5](./images/boxplot_day_minutes.png)
+|            | Mins     |
 | ---------- |:--------:|
 |No Churn Median|177.2 mins|
 |No Churn Mean|175.2 mins|
