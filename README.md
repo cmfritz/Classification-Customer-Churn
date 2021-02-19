@@ -50,12 +50,10 @@ Next, I tried a Decision Tree Classifier, trying both Gini Impurity and Informat
 ##### Results:
 | Tables     | Gini     | Entropy  |
 | ---------- |:--------:| --------:|
-| Accuracy |:91.2%:|:90.4%:|
-           Gini    Entropy
-Accuracy:  91.2%   90.4%
-Recall:    93.8%   94.2%
-F1:        70.6%   69.5%
-AUC:       72.9%   71.7%
+|Accuracy|91.2%|90.4%|
+Recall|93.8%|94.2%
+F1|70.6%|69.5%
+AUC|72.9%|71.7%
 Using entropy provided slightly better recall than Gini, however with the sacrifice of some accuracy, F1, and AUC. Either way, this model outperforms logistic regression, but I felt this could still be improved.
 
 #### Model 3 - XGBoost + Grid Search
