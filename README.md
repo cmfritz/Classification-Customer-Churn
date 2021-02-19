@@ -45,6 +45,7 @@ I tried logistic regression for my first model.
 |Recall|16.8%|
 |F1|18.6%|
 |AUC|37.2%|
+
 Accuracy was not bad, but performed poorly in other metrics, especially recall. Considering logistic regression is better for data that are more continuous, I tried a different classifier.
 
 #### Model 2 - Decision Tree Classifier
@@ -71,7 +72,7 @@ For my last set of models, I used XGBoost to train gradient-boosted decision tre
 
 The recall was boosted significantly by imposing greater penalties for errors on the minor class, which in this situation is identifying the churners.
 
-The best performing model was the grid search with XGBoost. Below is the decision matrix used to calculate recall and also the Precision-Recall curve used to calculate AUC. PR curve used instead of ROC curve since the classes are imbalanced, as evidenced by the confusion matrix.
+The best performing model was the grid search with XGBoost with a recall of 96.9%. Below is the decision matrix used to calculate recall and also the Precision-Recall curve used to calculate AUC. PR curve used instead of ROC curve since the classes are imbalanced, as evidenced by the confusion matrix.
 
 ![pic2](./images/conf_matrix_gridsearch.png)
 recall = True Positives / (True Positives + False Negatives)
@@ -85,9 +86,28 @@ I stayed with the boosted model to determine feature importance, and used SHAP (
 ![pic4](./images/shap_importance.png)
 
 ### Recommendations
+
+##### Recommendation 1:
+Looking at the first feature from the importance graph, I used a boxplot to compare the total day minutes of customers who stayed and those who churned.
 ![pic5](./images/boxplot_day_minutes.png)
-![pic6](./images/bar_service_calls.png)
-![pic7](./images/bar_intl_plan.png)
+|No Churn Median|177.2 mins|
+|No Churn Mean|175.2 mins|
+|Churn Median|217.6 mins|
+|Churn Mean|206.9 mins|
+
+Customers who spent more time on the phone during the day are more likely to churn. Customers who average over 200 minutes (outside the "box" for non-churners) should be considered higher risk for churning. Further investigation should be done if the needs of these heavy users of daytime minutes are being met.
+
+##### Recommendation 2:
+The next most important feature is the number of service calls. I used a box plot to compare frequency of calls to customer service for both churners and non-churners. I also used a bar graph to look at the number of times churners called customer service.
+![pic6a](./images/boxplot_no_service_calls)
+![pic6b](./images/bar_service_calls.png)
+As can been seen from the bar graph, most churners called at least once. If a customer calls, it should be taken as an opportunity to make sure they are satisfied with their service. While plenty of non-churners call, all callers should be treated as a churn risk since there is considerable overlap, and the goal is to minimize churns. 
+
+##### Recommendation 3:
+The third most important feature is if the customer has an international plan.
+![pic7a](./images/bar_intl_plan.png)
+![pic7b](./images/bar_intl_plan_churns)
+About 32% of churners have an international plan, compared to about 7% of non-churners. Further investigation should be done to determine if international plans are meetings customers needs.
 
 ### Deployment
 For More Information, please review my full analysis in Jupyter Notebook or my presentation.
@@ -107,4 +127,4 @@ For any additional questions, please contact Catherine Fritz: cmfritz0@gmail.com
     ├── state-geocodes.csv                     <- Census regions .csv file
 
 #### images
-    ├── .png                                   <- various .png files
+    ├── *.png                                  <- various .png files
