@@ -48,6 +48,9 @@ Accuracy was not bad, but performed poorly in other metrics, especially recall. 
 #### Model 2 - Decision Tree Classifier
 Next, I tried a Decision Tree Classifier, trying both Gini Impurity and Information Gain (entropy).
 ##### Results:
+| Tables     | Gini     | Entropy  |
+| ---------- |:--------:| --------:|
+| Accuracy |:91.2%:|:90.4%:|
            Gini    Entropy
 Accuracy:  91.2%   90.4%
 Recall:    93.8%   94.2%
@@ -67,7 +70,7 @@ The recall was boosted significantly by imposing greater penalties for errors on
 
 The best performing model was the grid search with XGBoost. Below is the decision matrix used to calculate recall and also the Precision-Recall curve used to calculate AUC. PR curve used instead of ROC curve since the classes are imbalanced, as evidenced by the confusion matrix.
 
-![pic2](./images/conf_matrix_gridsearch.png.PNG)
+![pic2](./images/conf_matrix_gridsearch.png)
 recall = True Positives / (True Positives + False Negatives)
 = 468 / (468 + 15) = 96.9%
 
