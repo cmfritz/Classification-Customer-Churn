@@ -38,7 +38,7 @@ Since the goal is to reduce the number of customer churns, I want to reduce the 
 
 #### Model 1 - Logistic Regression - SKlearn
 I tried logistic regression for my first model.
-#####Results:
+##### Results:
 Accuracy:  84.3%
 Recall:    16.8%
 F1:        18.6%
@@ -47,7 +47,7 @@ Accuracy was not bad, but performed poorly in other metrics, especially recall. 
 
 #### Model 2 - Decision Tree Classifier
 Next, I tried a Decision Tree Classifier, trying both Gini Impurity and Information Gain (entropy).
-#####Results:
+##### Results:
            Gini    Entropy
 Accuracy:  91.2%   90.4%
 Recall:    93.8%   94.2%
@@ -57,7 +57,7 @@ Using entropy provided slightly better recall than Gini, however with the sacrif
 
 #### Model 3 - XGBoost + Grid Search
 For my last set of models, I used XGBoost to train gradient-boosted decision trees. I then used a grid search to optimize the parameters to produce an even better model.
-#####Results:
+##### Results:
            XGB     Grid Search
 Accuracy:  94.6%   95.9%
 Recall:    77.8%   96.9%
