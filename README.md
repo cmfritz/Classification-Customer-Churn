@@ -39,32 +39,36 @@ Since the goal is to reduce the number of customer churns, I want to reduce the 
 #### Model 1 - Logistic Regression - SKlearn
 I tried logistic regression for my first model.
 ##### Results:
-Accuracy:  84.3%
-Recall:    16.8%
-F1:        18.6%
-AUC:       37.2%
+| Metric      | LR     |
+| ---------- |:--------:|
+|Accuracy|84.3%|
+|Recall|16.8%|
+|F1|18.6%|
+|AUC|37.2%|
 Accuracy was not bad, but performed poorly in other metrics, especially recall. Considering logistic regression is better for data that are more continuous, I tried a different classifier.
 
 #### Model 2 - Decision Tree Classifier
 Next, I tried a Decision Tree Classifier, trying both Gini Impurity and Information Gain (entropy).
 ##### Results:
-| Tables     | Gini     | Entropy  |
-| ---------- |:--------:| --------:|
+| Metric      | Gini     | Entropy  |
+| ---------- |:--------:|:--------:|
 |Accuracy|91.2%|90.4%|
-Recall|93.8%|94.2%
-F1|70.6%|69.5%
-AUC|72.9%|71.7%
+|Recall|93.8%|94.2%|
+|F1|70.6%|69.5%|
+|AUC|72.9%|71.7%|
 
 Using entropy provided slightly better recall than Gini, however with the sacrifice of some accuracy, F1, and AUC. Either way, this model outperforms logistic regression, but I felt this could still be improved.
 
 #### Model 3 - XGBoost + Grid Search
 For my last set of models, I used XGBoost to train gradient-boosted decision trees. I then used a grid search to optimize the parameters to produce an even better model.
 ##### Results:
-           XGB     Grid Search
-Accuracy:  94.6%   95.9%
-Recall:    77.8%   96.9%
-F1:        80.0%   88.0%
-AUC:       88.0%   89.7%
+| Metric      | XGB      | Grid Search|
+| ---------- |:--------:|:--------:|
+|Accuracy|94.6%|95.9%|
+|Recall|77.8%|96.9%|
+|F1|80.0%|88.0%|
+|AUC|88.0%|89.7%|
+
 The recall was boosted significantly by imposing greater penalties for errors on the minor class, which in this situation is identifying the churners.
 
 The best performing model was the grid search with XGBoost. Below is the decision matrix used to calculate recall and also the Precision-Recall curve used to calculate AUC. PR curve used instead of ROC curve since the classes are imbalanced, as evidenced by the confusion matrix.
