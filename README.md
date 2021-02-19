@@ -87,29 +87,36 @@ I stayed with the boosted model to determine feature importance, and used SHAP (
 
 ### Recommendations
 
-##### Recommendation 1:
+#### Recommendation 1:
 Looking at the first feature from the importance graph, I used a boxplot to compare the total day minutes of customers who stayed and those who churned.
 ![pic5](./images/boxplot_day_minutes.png)
-|            | Mins     |
-| ---------- |:--------:|
-|No Churn Median|177.2 mins|
-|No Churn Mean|175.2 mins|
-|Churn Median|217.6 mins|
-|Churn Mean|206.9 mins|
+| Metric | No Churn | Churned |
+| ---------- |:--------:|:--------:|
+|Median|177.2 mins|217.6 mins|
+|Mean|175.2 mins|206.9 mins|
+
 
 Customers who spent more time on the phone during the day are more likely to churn. Customers who average over 200 minutes (outside the "box" for non-churners) should be considered higher risk for churning. Further investigation should be done if the needs of these heavy users of daytime minutes are being met.
 
-##### Recommendation 2:
+#### Recommendation 2:
 The next most important feature is the number of service calls. I used a box plot to compare frequency of calls to customer service for both churners and non-churners. I also used a bar graph to look at the number of times churners called customer service.
 ![pic6a](./images/boxplot_no_service_calls.png)
 ![pic6b](./images/bar_service_calls.png)
 As can been seen from the bar graph, most churners called at least once. If a customer calls, it should be taken as an opportunity to make sure they are satisfied with their service. While plenty of non-churners call, all callers should be treated as a churn risk since there is considerable overlap, and the goal is to minimize churns.
 
-##### Recommendation 3:
+#### Recommendation 3:
 The third most important feature is if the customer has an international plan.
 ![pic7a](./images/bar_intl_plan.png)
 ![pic7b](./images/bar_intl_plan_churns.png)
+| Int'l Plan? | No Churn | Churned |
+| ---------- |:--------:|:--------:|
+|Yes|186 customers|137 customers|
+|No|2664 customers|297 customers|
+
 About 32% of churners have an international plan, compared to about 7% of non-churners. Further investigation should be done to determine if international plans are meetings customers needs.
+
+#### Conclusion:
+
 
 ### Deployment
 For More Information, please review my full analysis in Jupyter Notebook or my presentation.
