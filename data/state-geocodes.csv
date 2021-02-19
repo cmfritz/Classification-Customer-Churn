@@ -1,0 +1,52 @@
+﻿Region,RegionName,Division,State (FIPS),StateName,StateCode
+3,South,6,1,Alabama,AL
+4,West,9,2,Alaska,AK
+4,West,8,4,Arizona,AZ
+3,South,7,5,Arkansas,AR
+4,West,9,6,California,CA
+4,West,8,8,Colorado,CO
+1,Northeast,1,9,Connecticut,CT
+3,South,5,10,Delaware,DE
+3,South,5,11,District of Columbia,DC
+3,South,5,12,Florida,FL
+3,South,5,13,Georgia,GA
+4,West,9,15,Hawaii,HI
+4,West,8,16,Idaho,ID
+2,Midwest,3,17,Illinois,IL
+2,Midwest,3,18,Indiana,IN
+2,Midwest,4,19,Iowa,IA
+2,Midwest,4,20,Kansas,KS
+3,South,6,21,Kentucky,KY
+3,South,7,22,Louisiana,LA
+1,Northeast,1,23,Maine,ME
+3,South,5,24,Maryland,MD
+1,Northeast,1,25,Massachusetts,MA
+2,Midwest,3,26,Michigan,MI
+2,Midwest,4,27,Minnesota,MN
+3,South,6,28,Mississippi,MS
+2,Midwest,4,29,Missouri,MO
+4,West,8,30,Montana,MT
+2,Midwest,4,31,Nebraska,NE
+4,West,8,32,Nevada,NV
+1,Northeast,1,33,New Hampshire,NH
+1,Northeast,2,34,New Jersey,NJ
+4,West,8,35,New Mexico,NM
+1,Northeast,2,36,New York,NY
+3,South,5,37,North Carolina,NC
+2,Midwest,4,38,North Dakota,ND
+2,Midwest,3,39,Ohio,OH
+3,South,7,40,Oklahoma,OK
+4,West,9,41,Oregon,OR
+1,Northeast,2,42,Pennsylvania,PA
+1,Northeast,1,44,Rhode Island,RI
+3,South,5,45,South Carolina,SC
+2,Midwest,4,46,South Dakota,SD
+3,South,6,47,Tennessee,TN
+3,South,7,48,Texas,TX
+4,West,8,49,Utah,UT
+1,Northeast,1,50,Vermont,VT
+3,South,5,51,Virginia,VA
+4,West,9,53,Washington,WA
+3,South,5,54,West Virginia,WV
+2,Midwest,3,55,Wisconsin,WI
+4,West,8,56,Wyoming,WY
